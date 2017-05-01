@@ -59,8 +59,6 @@ namespace ZombicideDeckManager.Deck
         /// </summary>
         public void Shuffle()
         {
-            var newDeck = new List<T>();
-
             var length = Cards.Count;
             for (int i = 0; i < length; ++i)
             {
