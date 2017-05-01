@@ -5,8 +5,8 @@ namespace ZombicideDeckManager.Deck
 {
     public interface ISpawnCard
     {
-        int Number { get; }
-        string TitleText { get; }
+        int CardNumber    { get; }
+        string FlavorText { get; }
 
         ZombieStrain Strain { get; }
 

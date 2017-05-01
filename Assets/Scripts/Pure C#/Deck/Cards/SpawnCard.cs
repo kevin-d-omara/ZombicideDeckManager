@@ -8,8 +8,8 @@ namespace ZombicideDeckManager.Deck
     /// </summary>
     public class SpawnCard : ISpawnCard
     {
-        public int Number { get; private set; }
-        public string TitleText { get; private set; }
+        public int CardNumber    { get; private set; }
+        public string FlavorText { get; private set; }
 
         public ZombieStrain Strain { get; private set; }
 
@@ -20,7 +20,7 @@ namespace ZombicideDeckManager.Deck
 
         public void Display()
         {
-            Console.WriteLine(Number + ", " + TitleText);
+            Console.WriteLine(CardNumber + ", " + FlavorText);
             Console.WriteLine(Strain);
             Console.WriteLine("Red    : " + Red   .ToString());
             Console.WriteLine("Orange : " + Orange.ToString());
