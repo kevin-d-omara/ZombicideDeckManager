@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
-namespace ZombicideDeckManager.Deck
+namespace ZombicideDeckManager
 {
     /// <summary>
     /// Generic deck of cards.

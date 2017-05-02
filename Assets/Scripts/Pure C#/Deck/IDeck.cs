@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ZombicideDeckManager.Deck
+namespace ZombicideDeckManager
 {
     /// <summary>
     /// Defines an interface for a generic deck of cards.

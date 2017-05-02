@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ZombicideDeckManager.Deck
+namespace ZombicideDeckManager
 {
     /// <summary>
     /// The base features of all Zombie Spawn cards. Spawn cards are immutable.

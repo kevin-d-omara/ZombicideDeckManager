@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ZombicideDeckManager.Deck
+namespace ZombicideDeckManager
 {
     public enum ZombieType { Walker, Fatty, Runner, Abomination, Crawler, Seeker, Dog, Crow, Lost, VIP }
     public enum ZombieStrain { Standard, Skinner, Toxic, Berserker, Seeker }
