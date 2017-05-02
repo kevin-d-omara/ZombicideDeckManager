@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strains>
+    <strain>
+        <name>Toxic</name>
+        <icon>
+            <image>Icon_Toxic.png</image>
+            <color>64,255,0,255</color>
+        </icon>
+        <types>
+            <type>
+                <name>Walker</name>
+                <image>Toxic_Walker.png</image>
+            </type>
+            <type>
+                <name>Runner</name>
+                <image>Toxic_Runner.png</image>
+            </type>
+            <type>
+                <name>Fatty</name>
+                <image>Toxic_Fatty.png</image>
+            </type>
+            <type>
+                <name>Abomination</name>
+                <image>Toxic_Abomination.png</image>
+            </type>
+        </types>
+    </strain>
+</strains>

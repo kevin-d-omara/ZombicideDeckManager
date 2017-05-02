@@ -3,9 +3,6 @@ using System.Collections.Generic;
 
 namespace ZombicideDeckManager
 {
-    public enum ZombieType { Walker, Fatty, Runner, Abomination, Crawler, Seeker, Dog, Crow, Lost, VIP }
-    public enum ZombieStrain { Standard, Skinner, Toxic, Berserker, Seeker }
-
     /// <summary>
     /// Container for what is spawned at a single danger level.
     /// </summary>

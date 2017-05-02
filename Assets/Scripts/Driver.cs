@@ -10,6 +10,10 @@ namespace ZombicideDeckManager
 
         private void Start()
         {
+
+
+
+            /*
             var info = new SpawnCard("142", "IT'S FRAG + TIME!", ZombieStrain.Standard,
                 new DangerLevel("GLAD", 0, ZombieType.Walker),
                 new DangerLevel("BAD", 1, ZombieType.Runner),
@@ -19,6 +23,7 @@ namespace ZombicideDeckManager
             var card = Instantiate(spawnCardPrefab);
             card.name = "Spawn Card #" + info.cardNumber;
             card.GetComponent<SpawnCardController>().SetSpawnCard(info);
+            */
         }
     }
 }

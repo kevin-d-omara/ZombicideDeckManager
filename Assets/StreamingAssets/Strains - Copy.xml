@@ -1,0 +1,33 @@
+<strain="Toxic">
+    <strain_icon>
+        <image="Icon_Toxic.png">
+        <offset=1.0,0.0>
+        <rotation=0.0,0.0,0.0>
+        <scale=1.0,1.0,1.0>
+        <color=64,255,0,255>
+    </strain_icon>
+    <card_tint=64,255,0,255>
+    <types>
+        <type="Walker">                                                         <type name="Walker" image="Toxic_Walker.png" offset="0.0,0.0", scale="1.0" /type>
+            <image="Toxic_Walker.png">
+            <offset=0.0,0.0>
+            <scale=1.1>
+        </type>
+        <type="Runner">
+            <image="Toxic_Runner.png">
+            <offset=-1.0,0.0>
+            <scale=1.0>
+        </type>
+        <type="Fatty">
+            <image="Toxic_Fatty.png">
+            <offset=0.0,0.0>
+            <scale=1.0>
+        </type>
+        <type="Abomination">
+            <image="Toxic_Abomination.png">
+            <offset=0.0,0.0>
+            <scale=1.0>
+        </type>
+    </types>
+</strain>
+
