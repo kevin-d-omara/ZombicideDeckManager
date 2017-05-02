@@ -6,26 +6,23 @@ namespace ZombicideDeckManager.Deck
     /// <summary>
     /// The base features of all Zombie Spawn cards. Spawn cards are immutable.
     /// </summary>
-    public class SpawnCard : ISpawnCard
+    public class SpawnCard
     {
-        public int CardNumber    { get; private set; }
-        public string FlavorText { get; private set; }
+        public readonly string cardNumber;
+        public readonly string flavorText;
+        public readonly ZombieStrain strain;
+        public readonly DangerLevel[] level = new DangerLevel[4];
 
-        public ZombieStrain Strain { get; private set; }
-
-        public SpawnLevel Blue   { get; private set; }
-        public SpawnLevel Yellow { get; private set; }
-        public SpawnLevel Orange { get; private set; }
-        public SpawnLevel Red    { get; private set; }
-
-        public void Display()
+        public SpawnCard(string cardNumber, string flavorText, ZombieStrain strain,
+            DangerLevel blue, DangerLevel yellow, DangerLevel orange, DangerLevel red)
         {
-            Console.WriteLine(CardNumber + ", " + FlavorText);
-            Console.WriteLine(Strain);
-            Console.WriteLine("Red    : " + Red   .ToString());
-            Console.WriteLine("Orange : " + Orange.ToString());
-            Console.WriteLine("Yellow : " + Yellow.ToString());
-            Console.WriteLine("Blue   : " + Blue  .ToString());
+            this.cardNumber = cardNumber;
+            this.flavorText = flavorText;
+            this.strain = strain;
+            level[0] = blue;
+            level[1] = yellow;
+            level[2] = orange;
+            level[3] = red;
         }
     }
 }

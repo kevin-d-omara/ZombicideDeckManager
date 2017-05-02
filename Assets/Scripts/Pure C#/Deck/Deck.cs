@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 namespace ZombicideDeckManager.Deck
 {
@@ -62,7 +63,7 @@ namespace ZombicideDeckManager.Deck
             var length = Cards.Count;
             for (int i = 0; i < length; ++i)
             {
-                Swap(i, i + RandomProvider.Random.Next(length - i));
+                Swap(i, i + Random.Range(1, length));
             }
         }
 
