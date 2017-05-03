@@ -10,9 +10,9 @@ namespace ZombicideDeckManager
     {
         public readonly string caption;
         public readonly int amount;
-        public readonly ZombieType type;
+        public readonly Icon type;
 
-        public DangerLevel(string caption, int amount, ZombieType type)
+        public DangerLevel(string caption, int amount, Icon type)
         {
             this.caption = caption;
             this.amount = amount;

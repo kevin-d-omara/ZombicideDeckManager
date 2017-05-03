@@ -20,5 +20,7 @@ namespace ZombicideDeckManager
         {
             this.sprite = sprite;
         }
+
+        // rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, texture.width);
     }
 }
