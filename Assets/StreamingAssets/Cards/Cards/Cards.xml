@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cards>
+    <card>
+        <card_number>1</card_number>
+        <flavor_text>IT'S TIME TO KICK + SOME BUTT!</flavor_text>
+        <watermark></watermark>
+        <danger_level level="blue">
+            <caption>BAD</caption>
+            <amount>0</amount>
+            <silhouette></silhouette>
+        </danger_level>
+        <danger_level level="yellow">
+            <caption>WORSE</caption>
+            <amount>2</amount>
+            <silhouette>Standard_Runner</silhouette>
+        </danger_level>
+        <danger_level level="orange">
+            <caption>UH-OH</caption>
+            <amount>2</amount>
+            <silhouette>Standard_Runner</silhouette>
+        </danger_level>
+        <danger_level level="red">
+            <caption>AAAAAH!</caption>
+            <amount>5</amount>
+            <silhouette>Standard_Walker</silhouette>
+        </danger_level>
+    </card>
+
+cards:
+    card:
+        card_number:1
+        flavor_text:IT'S TIME TO KICK + SOME BUTT!
+        watermark:
+        level:blue
+            caption:BAD
+            amount:0
+            type:Standard_Walker
+        level:yellow
+            caption:WORSE
+            amount:2
+            type:Standard_Runner
+        level:orange
+            caption:UH-OH
+            amount:2
+            type:Standard_Runner
+        level:red
+            caption:AAAAAH!
+            amount:5
+            type:Standard_Walker
+    
+    <card>
+        <card_number>78</card_number>
+        <flavor_text>BITE ME!</flavor_text>
+        <watermark>Toxic</watermark>
+        <danger_level level="blue">
+            <caption>BAD</caption>
+            <amount>1</amount>
+            <silhouette>Toxic_Abomination</silhouette>
+        </danger_level>
+        <danger_level level="yellow">
+            <caption>WORSE</caption>
+            <amount>3</amount>
+            <silhouette>Toxic_Walker</silhouette>
+        </danger_level>
+        <danger_level level="orange">
+            <caption>UH-OH</caption>
+            <amount>2</amount>
+            <silhouette>Toxic_Runner</silhouette>
+        </danger_level>
+        <danger_level level="red">
+            <caption>AAAAAH!</caption>
+            <amount>5</amount>
+            <silhouette>Toxic_Walker</silhouette>
+        </danger_level>
+    </card>
+</cards>
