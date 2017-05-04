@@ -12,6 +12,7 @@ namespace ZombicideDeckManager
     public class Icon
     {
         public Sprite sprite;
+        public string image = "";
         public Vector2 offset = Vector2.zero;
         public float rotation = 0.0f;
         public float scale = 1.0f;

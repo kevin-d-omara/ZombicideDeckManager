@@ -25,6 +25,11 @@ namespace ZombicideDeckManager
             Debug.Log("Sprites loaded into RAM.");
 
             // Create Icons (Sprite + metadata) from images
+            var path = Application.streamingAssetsPath + "/Images/Symbols/Symbols.json";
+            var js = File.ReadAllText(path);
+            var icon = JsonUtility.FromJson<Icon>(js);
+
+            //var icon = JsonUtility.FromJson<Icon>();
 
             // TODO: Free up memory?
 
