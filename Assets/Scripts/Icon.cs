@@ -8,6 +8,7 @@ namespace ZombicideDeckManager
     /// <summary>
     /// Metadata for a sprite.
     /// </summary>
+    [Serializable]
     public class Icon
     {
         public Sprite sprite;
@@ -15,12 +16,5 @@ namespace ZombicideDeckManager
         public float rotation = 0.0f;
         public float scale = 1.0f;
         public Color color = Color.white;
-
-        public Icon(Sprite sprite)
-        {
-            this.sprite = sprite;
-        }
-
-        // rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, texture.width);
     }
 }

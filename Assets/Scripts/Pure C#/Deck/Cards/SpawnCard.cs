@@ -10,10 +10,10 @@ namespace ZombicideDeckManager
     {
         public readonly string cardNumber;
         public readonly string flavorText;
-        public readonly ZombieStrain strain;
+        public readonly Icon strain;
         public readonly DangerLevel[] level = new DangerLevel[4];
 
-        public SpawnCard(string cardNumber, string flavorText, ZombieStrain strain,
+        public SpawnCard(string cardNumber, string flavorText, Icon strain,
             DangerLevel blue, DangerLevel yellow, DangerLevel orange, DangerLevel red)
         {
             this.cardNumber = cardNumber;

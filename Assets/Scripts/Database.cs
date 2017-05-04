@@ -9,49 +9,27 @@ namespace ZombicideDeckManager
 {
     public class Database : MonoBehaviour
     {
-        public Dictionary<string, ZombieStrain> Strains { get; private set; }
-
-        private Dictionary<string, Sprite> icons = new Dictionary<string, Sprite>();
-        private Dictionary<string, Sprite> silhouettes = new Dictionary<string, Sprite>();
+        private Dictionary<string, Dictionary<string, Sprite>> cache = new Dictionary<string, Dictionary<string, Sprite>>();
 
         private void Awake()
         {
-            Strains = new Dictionary<string, ZombieStrain>();
+            cache.Add("Symbols", new Dictionary<string, Sprite>());
+            cache.Add("Silhouettes", new Dictionary<string, Sprite>());
         }
 
         private IEnumerator Start()
         {
-            // Load all sprites into RAM.
-            yield return StartCoroutine(LoadImagesIn("Icons/", icons));
-            yield return StartCoroutine(LoadImagesIn("Silhouettes/", silhouettes));
+            // Load all images into RAM from StreamingAssets/
+            yield return StartCoroutine(LoadImagesIn("Symbols/", cache["Symbols"]));
+            yield return StartCoroutine(LoadImagesIn("Silhouettes/", cache["Silhouettes"]));
             Debug.Log("Sprites loaded into RAM.");
 
-            // Create Strains.
-            CreateStrains();
-            Debug.Log("Strains created.");
+            // Create Icons (Sprite + metadata) from images
             
+
             // TODO: Free up memory?
+
         }
-
-        private void CreateStrains()
-        {
-            var doc = new XmlDocument();
-            doc.Load(Application.streamingAssetsPath + "/Strains.xml");
-
-            foreach (XmlNode strain in doc.DocumentElement)
-            {
-                var name = strain["name"].InnerText;
-
-                // Load icon.
-                var iconNode = strain["icon"];
-                var icon = new Icon(icons[iconNode["image"].InnerText]);
-                // color, etc.
-                Strains.Add(name, new ZombieStrain(name, icon));
-
-                // Load Types.
-            }
-        }
-
 
         /// <summary>
         /// Load all images from disk into a dictionary, where key=filename and value=sprite.
