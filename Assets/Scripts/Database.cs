@@ -25,7 +25,6 @@ namespace ZombicideDeckManager
             Debug.Log("Sprites loaded into RAM.");
 
             // Create Icons (Sprite + metadata) from images
-            
 
             // TODO: Free up memory?
 
@@ -38,9 +37,9 @@ namespace ZombicideDeckManager
         /// <param name="dictionary">Dictionary to place loaded sprites into.</param>
         private IEnumerator LoadImagesIn(string subFolder, Dictionary<string, Sprite> dictionary)
         {
-            var absoluteFolderPath = Application.streamingAssetsPath + "/Sprites/" + subFolder;
+            var path = Application.streamingAssetsPath + "/Images/" + subFolder;
 
-            var imageNames = Directory.GetFiles(absoluteFolderPath, @"*.png");
+            var imageNames = Directory.GetFiles(path, @"*.png");
             for (int i = 0; i < imageNames.Length; ++i)
             {
                 Sprite sprite = null;

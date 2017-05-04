@@ -204,13 +204,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1724024641}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee5f36e42728deb499255ec6353fe4ba, type: 3}
+  m_Script: {fileID: 11500000, guid: ff50336b443ba0e42b49f8d571c0c34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCardPrefab: {fileID: 1564693280150258, guid: 013f35a4464da5343b27a60b2184ba59,
-    type: 2}
 --- !u!1 &2119341017
 GameObject:
   m_ObjectHideFlags: 0
