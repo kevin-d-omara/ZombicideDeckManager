@@ -9,6 +9,9 @@ namespace ZombicideDeckManager
 {
     public class Database : MonoBehaviour
     {
+        /// <summary>
+        /// Holds all images in RAM from StreamingAssets/
+        /// </summary>
         private Dictionary<string, Dictionary<string, Sprite>> cache = new Dictionary<string, Dictionary<string, Sprite>>();
 
         private void Awake()
@@ -27,11 +30,16 @@ namespace ZombicideDeckManager
             // Create Icons (Sprite + metadata) from images
             var path = Application.streamingAssetsPath + "/Images/Symbols/Symbols.json";
             var js = File.ReadAllText(path);
-            var icon = JsonUtility.FromJson<Icon>(js);
+            var icons = JsonHelper.GetJsonArray<Icon>(js);
 
-            //var icon = JsonUtility.FromJson<Icon>();
+            foreach (Icon icon in icons)
+            {
+                icon.sprite = cache["Symbols"][icon.image];
+            }
 
-            // TODO: Free up memory?
+
+
+            // Release memory (i.e. de-reference all unused images) & Create sprite atlas.
 
         }
 

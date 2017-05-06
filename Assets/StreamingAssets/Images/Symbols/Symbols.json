@@ -1,4 +1,16 @@
-{
-    "rotation": 45,
-    "scale": 1.0
-}
+[
+    {
+        "image": "Toxic.png",
+        "offset": {"x": 2, "y":-1.23456},
+        "rotation": 45,
+        "scale": 1.25,
+        "color": {"r": 64, "g": 255, "b": 0, "a": 255}
+    },
+    {
+        "image": "Seeker.png",
+        "offset": {"x": 2, "y":-1.23456},
+        "rotation": 45,
+        "scale": 1.25,
+        "color": {"r": 0, "g": 0, "b": 0, "a": 255}
+    }
+]
