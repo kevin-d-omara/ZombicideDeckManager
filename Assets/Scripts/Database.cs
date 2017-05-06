@@ -14,10 +14,18 @@ namespace ZombicideDeckManager
         /// </summary>
         private Dictionary<string, Dictionary<string, Sprite>> cache = new Dictionary<string, Dictionary<string, Sprite>>();
 
+        /// <summary>
+        /// Holds all the Icons (Sprite + metadata) from StreamingAssets/
+        /// </summary>
+        private Dictionary<string, Dictionary<string, Icon>> icons = new Dictionary<string, Dictionary<string, Icon>>();
+
         private void Awake()
         {
             cache.Add("Symbols", new Dictionary<string, Sprite>());
             cache.Add("Silhouettes", new Dictionary<string, Sprite>());
+
+            icons.Add("Symbols", new Dictionary<string, Icon>());
+            icons.Add("Silhouettes", new Dictionary<string, Icon>());
         }
 
         private IEnumerator Start()
@@ -28,25 +36,37 @@ namespace ZombicideDeckManager
             Debug.Log("Sprites loaded into RAM.");
 
             // Create Icons (Sprite + metadata) from images
-            var path = Application.streamingAssetsPath + "/Images/Symbols/Symbols.json";
-            var js = File.ReadAllText(path);
-            var icons = JsonHelper.GetJsonArray<Icon>(js);
-
-            foreach (Icon icon in icons)
-            {
-                icon.sprite = cache["Symbols"][icon.image];
-            }
-
-
+            MakeIcons("Symbols/Symbols.json", "Symbols", icons["Symbols"]);
 
             // Release memory (i.e. de-reference all unused images) & Create sprite atlas.
 
         }
 
         /// <summary>
+        /// Create Icons from metadata in a JSON file.
+        /// </summary>
+        /// <param name="subFilePath">Sub-path in Images/ (i.e. Symbols/Symbols.json).</param>
+        /// <param name="cacheKey">Key in 'cache' to get Sprites (i.e. "Symbols").</param>
+        /// <param name="dictionary">Dictionary to place icons into.</param>
+        private void MakeIcons(string subFilePath, string cacheKey, Dictionary<string, Icon> dictionary)
+        {
+            // Read metadata from JSON file.
+            var path = Application.streamingAssetsPath + "/Images/" + subFilePath;
+            var js = File.ReadAllText(path);
+            var icons = JsonHelper.GetJsonArray<Icon>(js);
+
+            // Create Icons based by metadata.
+            foreach (Icon icon in icons)
+            {
+                icon.sprite = cache[cacheKey][icon.image];
+                dictionary.Add(icon.image, icon);
+            }
+        }
+
+        /// <summary>
         /// Load all images from disk into a dictionary, where key=filename and value=sprite.
         /// </summary>
-        /// <param name="subFolder">Subfolder in Sprites/ (i.e. "Silhouettes/").</param>
+        /// <param name="subFolder">Subfolder in Images/ (i.e. "Silhouettes/").</param>
         /// <param name="dictionary">Dictionary to place loaded sprites into.</param>
         private IEnumerator LoadImagesIn(string subFolder, Dictionary<string, Sprite> dictionary)
         {
