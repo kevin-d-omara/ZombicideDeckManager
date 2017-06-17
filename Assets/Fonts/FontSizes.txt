@@ -1,0 +1,25 @@
+#### Flavor Text (Header)
+Card  | Style   | Size | Example
+Spawn | Classic |  39  | "IT'S TIME TO KICK + SOME BUTT!"
+Spawn | Uniform |  48  | "SKINNER + ZOMBIES!"
+
+Extra | Classic |  39  | "JUST WHEN YOU THOUGHT + THINGS COULDN'T GET ANY WORSE!"
+						 "              JUST WHEN YOU
+									    THOUGHT THINGS
+									    COULDN'T GET ANY WORSE!" // off center w/out new template or offset being defined (hacky)
+Extra | Uniform |  48  | "EXTRA ACTIVATION"
+
+Sewer | 
+
+---------------------------------------------------------------
+
+#### Caption Text
+Card  | Style   | Size | Example
+Spawn | Classic |  86  | "UH-OH"
+
+Extra | Classic |  39  | "ALL BERSERKER + RUNNERS: 1 EXTRA + ACTIVATION"
+				   42  | "ALL RUNNERS + 1 EXTRA TURN"
+Extra | Uniform |  42  | "ALL + BERSERKER + WALKERS"
+						 " + STILL COOL" // vertically centered w/out offset being defined
+
+Sewer | 
