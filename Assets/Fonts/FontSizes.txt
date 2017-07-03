@@ -23,3 +23,12 @@ Extra | Uniform |  42  | "ALL + BERSERKER + WALKERS"
 						 " + STILL COOL" // vertically centered w/out offset being defined
 
 Sewer | 
+
+
+
+
+===============================================================
+
+Symbol | Scale | Rotation (z) |   x  |  y  | Color
+Toxic  | 0.65  |    17.658    | -141 | 299 | 62962EFF
+Bed    | 0.85  |     0.0      | -120 | 254 | FFFFFFFF (none)
